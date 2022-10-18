@@ -5,7 +5,7 @@ Home: https://github.com/PhilippSteinhauer/GFDsurv
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gfdsurv-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gfdsurv-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implemented are three Wald-type statistic and respective permuted versions for null hypotheses formulated in terms of cumulative hazard rate functions, medians and the concordance measure, respectively, in the general framework of survival factorial designs with possibly heterogeneous survival and/or censoring distributions, for crossed designs with an arbitrary number of factors and nested designs with up to three factors. Ditzhaus, Dobler and Pauly (2020) <doi:10.1177/0962280220980784> Ditzhaus, Janssen, Pauly (2020) <arXiv: 2004.10818v2> Dobler and Pauly (2019) <doi:10.1177/0962280219831316>.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14455&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-gfdsurv-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14455&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-gfdsurv-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -39,16 +39,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-gfdsurv` can be installed with:
+Once the `conda-forge` channel has been enabled, `r-gfdsurv` can be installed with `conda`:
 
 ```
 conda install r-gfdsurv
 ```
 
-It is possible to list all of the versions of `r-gfdsurv` available on your platform with:
+or with `mamba`:
+
+```
+mamba install r-gfdsurv
+```
+
+It is possible to list all of the versions of `r-gfdsurv` available on your platform with `conda`:
 
 ```
 conda search r-gfdsurv --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search r-gfdsurv --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search r-gfdsurv --channel conda-forge
+
+# List packages depending on `r-gfdsurv`:
+mamba repoquery whoneeds r-gfdsurv --channel conda-forge
+
+# List dependencies of `r-gfdsurv`:
+mamba repoquery depends r-gfdsurv --channel conda-forge
 ```
 
 
@@ -66,10 +91,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
