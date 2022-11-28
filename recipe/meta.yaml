@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GFDsurv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GFDsurv/GFDsurv_{{ version }}.tar.gz
-  sha256: 4996311dbaa240d536798b17cd87bf2e6c2d870307ab61209df2e5f4fdfecacf
+  sha256: 846aa98cc3bcd293070f568bd8433249d1f772422daa9c66aa22f1d690330663
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -57,13 +57,8 @@ test:
 about:
   home: https://github.com/PhilippSteinhauer/GFDsurv
   license: GPL-3.0-or-later
-  summary: 'Implemented are three Wald-type statistic and respective permuted versions for null
-    hypotheses formulated in terms of cumulative hazard rate functions, medians and
-    the concordance measure, respectively, in the general framework of survival factorial
-    designs with possibly heterogeneous survival and/or censoring distributions, for
-    crossed designs with an arbitrary number of factors and nested designs with up to
-    three factors. Ditzhaus, Dobler and Pauly (2020) <doi:10.1177/0962280220980784>
-    Ditzhaus, Janssen, Pauly (2020) <arXiv: 2004.10818v2> Dobler and Pauly (2019) <doi:10.1177/0962280219831316>.'
+  summary: 'Implemented are three Wald-type statistic and respective permuted versions for null hypotheses formulated in terms of cumulative hazard rate functions, medians and the concordance measure, respectively, in the general framework of survival factorial designs with possibly heterogeneous survival and/or censoring
+    distributions, for crossed designs with an arbitrary number of factors and nested designs with up to three factors. Ditzhaus, Dobler and Pauly (2020) <doi:10.1177/0962280220980784> Ditzhaus, Janssen, Pauly (2020) <arXiv: 2004.10818v2> Dobler and Pauly (2019) <doi:10.1177/0962280219831316>.'
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
