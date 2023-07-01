@@ -1,11 +1,11 @@
-About r-gfdsurv
-===============
+About r-gfdsurv-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gfdsurv-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/PhilippSteinhauer/GFDsurv
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gfdsurv-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implemented are three Wald-type statistic and respective permuted versions for null hypotheses formulated in terms of cumulative hazard rate functions, medians and the concordance measure, respectively, in the general framework of survival factorial designs with possibly heterogeneous survival and/or censoring distributions, for crossed designs with an arbitrary number of factors and nested designs with up to three factors. Ditzhaus, Dobler and Pauly (2020) <doi:10.1177/0962280220980784> Ditzhaus, Janssen, Pauly (2020) <arXiv: 2004.10818v2> Dobler and Pauly (2019) <doi:10.1177/0962280219831316>.
 
