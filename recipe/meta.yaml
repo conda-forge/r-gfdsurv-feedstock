@@ -1,6 +1,5 @@
 {% set version = "0.1.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-gfdsurv
@@ -13,8 +12,7 @@ source:
   sha256: 846aa98cc3bcd293070f568bd8433249d1f772422daa9c66aa22f1d690330663
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
