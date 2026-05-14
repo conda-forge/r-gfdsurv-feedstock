@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GFDsurv_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GFDsurv/GFDsurv_{{ version }}.tar.gz
-  sha256: 846aa98cc3bcd293070f568bd8433249d1f772422daa9c66aa22f1d690330663
+  sha256: 4ca7b94ee38e414ffea9668a6de598abf4fa5e95bbf26d197abdbb40097ad26e
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
